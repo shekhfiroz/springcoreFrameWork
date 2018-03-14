@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="property-id" class="collectionDI.beans.PropertyStore">
+		<property name="products">
+			<props>
+				<prop key="one"> hello</prop>
+				<prop key="two">i am </prop>
+				<prop key="three">learningSpring</prop>
+			</props>
+		</property>
+	</bean>
+</beans>
