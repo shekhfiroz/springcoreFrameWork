@@ -9,17 +9,22 @@ public class MessageWriterFactory {
 	public static Object createMessageWriterFactory(String LClassName) throws Exception {
 		System.out.println("LClassName..." + LClassName);
 		Properties props = new Properties();
-		FileInputStream fis = new FileInputStream(
-				"D:\\springdevelopment\\springcore\\corefactory\\src\\main\\java\\com\\main\\cdi\\common\\Appclasses.properties");
+		/*
+		 * FileInputStream fis = new FileInputStream(
+		 * "D:\\springdevelopment\\springcore\\corefactory\\src\\main\\java\\com\\main\\cdi\\common\\Appclasses.properties"
+		 * );
+		 */
+		FileInputStream fis = (FileInputStream) MessageWriterFactory.class.getClassLoader()
+				.getResourceAsStream("com/main/cdi/common/Appclasses.properties");
+		System.out.println(fis);
 		props.load(fis);
-
 		String className = props.getProperty(LClassName);
 		System.out.println("className..." + className);
-		
+
 		Class<?> clazz = Class.forName(className);
-		
+
 		Object obj = clazz.newInstance();
-		
+
 		if (obj.equals("messagewriter.class"))
 			return new MessageWriterFactory();
 		else if (obj.equals("messageconverter.class"))
