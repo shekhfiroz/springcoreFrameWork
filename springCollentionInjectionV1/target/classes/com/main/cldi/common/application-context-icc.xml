@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="icc" class="com.main.cldi.beans.IccBoard">
+		<property name="members">
+			<util:map>
+				<entry key-ref="games" value="sg" />
+				<entry key="1" value="sg" />
+			</util:map>
+		</property>
+		<constructor-arg name="schedule">
+			<props>
+				<prop key="sunil"> executive member</prop>
+			</props>
+		</constructor-arg>
+
+	</bean>
+
+	<bean id="games" class="com.main.cldi.beans.Games">
+		<constructor-arg name="players">
+			<util:list>
+				<value>sachin</value>
+				<value>dravid</value>
+				<value>kholi</value>
+			</util:list>
+		</constructor-arg>
+
+		<constructor-arg name="rules">
+			<util:set>
+				<value>there must be 11 players</value>
+				<value>oneday will be of 50 over</value>
+			</util:set>
+
+		</constructor-arg>
+	</bean>
+
+
+</beans>

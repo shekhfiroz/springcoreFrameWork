@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+<!-- 	<bean id="player" class="com.main.cldi.beans.IccBoard">
+		<property name="rules">
+			<util:set value-type="java.lang.String">
+				<value>"there should be 50 overs"</value>
+				<value>minimum 2 team is required</value>
+				<value>Umpier decission is final</value>
+			</util:set>
+		</property>
+	</bean> -->
+	<bean id="games" class="com.main.cldi.beans.Games">
+		<constructor-arg>
+			<util:map>
+				<entry key="T20" value="Virat"></entry>
+				<entry key="onedat" value="Rohit"></entry>
+			</util:map>
+		</constructor-arg>
+		<constructor-arg ref="player"></constructor-arg>
+
+	</bean>
+	
+</beans>
