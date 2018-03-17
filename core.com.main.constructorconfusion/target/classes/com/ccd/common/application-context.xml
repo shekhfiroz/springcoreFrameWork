@@ -2,10 +2,20 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	<bean id="product" class="com.ccd.beans.Product">
-		<constructor-arg value="fridge" name="500" />
-		<constructor-arg value="fan" name="jetfan" />
-	</bean>
 
-</beans>
+	<bean id="product" class="com.ccd.beans.Product">
+		<constructor-arg name="amount" value="500" />
+		<constructor-arg name="product_item" value="fan" />
+
+	</bean>
+	<bean id="account" class="com.ccd.beans.Account">
+		<!-- <constructor-arg name="accountNo" value="jkjk" type= /> -->
+		<constructor-arg name="uniqueIdentificationNumber"
+			value="helloo" />
+	</bean>
+	<bean id="project" class="com.ccd.beans.Project">
+		<constructor-arg name="project_no" value="123"/>
+		<constructor-arg name="budget" value="2.0f"/>
+	</bean>
+</beans> 
+ 
