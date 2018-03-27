@@ -2,12 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="car" class="com.irefbeans.Car">
-<property name="engineId">
-<idref bean="marutisuzuki"/>
-</property>
-</bean> 
+	<bean id="car" class="com.irefbeans.Car">
+		<property name="engineId">
+			<idref bean="yamaha" />
+		</property>
+	</bean>
 
-	<bean id="marutisuzuki100cc " class="com.irefbeans.SuzukiEngineImpl" />
+<!-- 	<bean id="marutisuzuki100cc " class="com.irefbeans.SuzukiEngineImpl" /> -->
+	<bean id="marutisuzuki " class="com.irefbeans.SuzukiEngineImpl" />
 	<bean id="yamaha" class="com.irefbeans.YamahaEngineImpl" />
 </beans>
