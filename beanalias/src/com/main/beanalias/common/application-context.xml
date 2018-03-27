@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="toy" class="com.main.beanalias.beans.Toy">
+		<!-- <constructor-arg name="toyId" value="123" />
+		<constructor-arg name="toyName" value="flying-car" />
+		<constructor-arg name="ageGroup" value="6" />
+		<constructor-arg name="description" value="i can fly  from roof" /> -->
+		
+		<constructor-arg  value="123" />
+		<constructor-arg  value="flying-car" />
+		<constructor-arg  value="6" />
+		<constructor-arg  value="i can fly  from roof" />
+		
+	</bean>
+	<alias name="toy" alias="toytype" />
+	<alias name="toy" alias="toyvarity" />
+	<alias name="toy" alias="mytoy" />
+	<alias name="toy" alias="khilona" />
+</beans>

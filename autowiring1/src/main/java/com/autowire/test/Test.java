@@ -7,7 +7,11 @@ import org.springframework.core.io.ClassPathResource;
 import com.autowire.beans.Robot;
 
 public class Test {
-BeanFactory factory=new XmlBeanFactory(new ClassPathResource("com/autowire/common/application-context.xml"));
-Robot robot=factory.getBean("robot",Robot.class);
-System.out.print(robot);
+	public static void main(String[] args) {
+
+		BeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/autowire/common/application-context.xml"));
+		Robot robot = factory.getBean("robot", Robot.class);
+		System.out.print(robot);
+
+	}
 }

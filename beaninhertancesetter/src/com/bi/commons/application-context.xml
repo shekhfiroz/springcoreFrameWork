@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="car" class="com.bi.beans.Car">
+		<property name="name" value="bmw" />
+		<property name="carType" value="luxary" />
+		<property name="price" value="4335435" />
+		<property name="color" value="black" />
+		<property name="company" value="bmw222"></property>
+	</bean>
+	<bean id="car1" class="com.bi.beans.Car" parent="car">
+		<property name="name" value="swift" />
+		<property name="color" value="red" />
+
+	</bean>
+	<bean id="car2" class="com.bi.beans.Car" parent="car1">
+	<property name="color" value="white"/>
+	<property name="price" value="400000"/>
+	</bean>
+</beans>

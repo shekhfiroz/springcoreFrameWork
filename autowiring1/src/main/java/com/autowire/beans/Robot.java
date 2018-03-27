@@ -2,6 +2,7 @@ package com.autowire.beans;
 
 public class Robot {
 	private Chip chip;
+	private String bottle;
 
 	public Robot(Chip chip) {
 		this.chip = chip;
