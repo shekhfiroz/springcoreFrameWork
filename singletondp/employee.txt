@@ -1,0 +1,7 @@
+1,hello
+2,shekh
+3,firoz
+4,alam
+5,laptop
+6,bottle
+7,practice
