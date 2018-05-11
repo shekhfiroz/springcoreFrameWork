@@ -13,5 +13,4 @@ public class TestIdref {
 		Car car = factory.getBean("car", Car.class);
 		car.drive();
 	}
-
 }

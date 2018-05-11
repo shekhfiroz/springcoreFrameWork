@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="account" class="com.pe.beans.Account">
+		<property name="account_no" value="1001" />
+		<property name="account_holder_name" value="shekh" />
+		<property name="registered_date" value="10/05/2018" />
+		<property name="interest" value="reading,sleeping,eating" />
+		<property name="stackoverflow" value="https://stackoverflow.com/" />
+	</bean>
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- dependency-check="default",object ,all -->
+	<bean id="house" class="com.main.beans.House"
+		dependency-check="all">
+		<!-- <property name="houseno" value="610" /> <property name="loction" value="Ameerpet" 
+			/> <property name="area" value="1200" /> <property name="housetax" ref="tax"/> -->
+	</bean>
+
+	<bean id="tax" class="com.main.beans.HouseTax"
+		dependency-check="simple">
+		<property name="taxamount" value="house" />
+		<property name="uanno" value="7678gu"></property>
+	</bean>
+
+</beans>

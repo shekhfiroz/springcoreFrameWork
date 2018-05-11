@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="reminder" class="com.fb.beans.Reminder">
+		<property name="notes" value="meeting" />
+		<property name="snooze" value="true" />
+		<property name="schedule" ref="calfact" />
+	</bean>
+
+	<bean id="calfact" class="com.fb.beans.CalenderBeanFactory"
+		scope="prototype">
+		<constructor-arg name="year" value="2017" />
+		<constructor-arg name="month" value="09" />
+		<constructor-arg name="day" value="20" />
+	</bean>
+</beans>
