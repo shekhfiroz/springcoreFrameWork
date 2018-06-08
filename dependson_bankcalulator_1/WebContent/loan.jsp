@@ -9,28 +9,22 @@
 <body>
 	<form method="GET" action="BrowseLoanServlet">
 		<p>
-			LoanType : <select name="loantype">
+			LoanType : 
+			 <select name="loantype">
 				<option value="homeloan">HomeLoan</option>
 				<option value="carloan">CarLoan</option>
-				<option value="bikeloan">BikeLoan</option>
-				<option value="agricultureloan">AgricultureLoan</option>
-				<option value="aducationloan">EducationLoan</option>
 			</select>
 		</p>
 		<p>
-			LoanAmount : <input type="text" name="loanamount" maxlength="10" pattern="[0-9]{4,10}">
+			LoanAmount : <input type="text" name="loanamount" maxlength="20" pattern="[0-9]{4,10}">
 		</p>
-		
+
 		<p>
 			Place : <select name=place>
-				<option value="hyderabad">Hyderbad</option>
-				<option value="chennai">Chennai</option>
-				<option value="bangalore">Bangalore</option>
-				<option value="kanpur">Kanpur</option>
-				<option value="delhi">Delhi</option>
+				<option value="hyd">Hyderbad</option>
 			</select>
 		</p>
-		
+
 		<p>
 			Tenure : <input type="number" name="tenure" value="00" min="12"
 				max="600">

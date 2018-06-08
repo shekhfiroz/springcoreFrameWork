@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="planfinder" class="com.mr.beans.PlanFinder">
+		<replaced-method name="findPlans" replacer="findplanreplacer">
+			<arg-type> age</arg-type>
+			<arg-type>zipCode</arg-type>
+		</replaced-method>
+	</bean>
+
+	<bean id="findplanreplacer" class="com.mr.replacer.FindPlanReplacer">
+	</bean>
+</beans>
